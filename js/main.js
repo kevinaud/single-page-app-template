@@ -22,32 +22,35 @@
 		if(partialsCache[fragmentId]){
 			callback(partialsCache[fragmentId]);	
 		} else {
-			fetchFile(fragmentId + ".html", function(content){
-				partialsCache[fragmentId] = content;
+			// jQuery AJAX request to retrieve content
+			$.get(fragmentId + ".html", function(content){
 
-				callback(content);	
+				partialsCache[fragmentId] = content;
+				callback(content);
+
 			});
 		}
 	}
 
 	function setActiveLink(fragmentId){
 
-		var navbarDiv = document.getElementById("navbar");
-		var links = navbarDiv.children;
+		var items = document.getElementsByClassName("nav-item");
 
-		var link;
+		var links;
 		var pagename;
 		var i;
 		
-		for(i = 0; i < links.length; i++){
+		for(i = 0; i < items.length; i++){
+			
+			links = items[i].getElementsByTagName('a');
+			link = links[0];
 
-			link = links[i];
-			pageName = link.getAttribute("href").substr(1);
+			pageName = link.getAttribute('href').substr(1);
 
 			if(pageName === fragmentId){
-				link.setAttribute("class", "active");	
+				items[i].className += " active";	
 			} else {
-				link.removeAttribute("class");	
+				$(items[i]).removeClass("active");	
 			}
 
 		}

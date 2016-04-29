@@ -1,17 +1,13 @@
-#navbar {
-  padding-top: 10px;
-  font-size: 16px; }
-  #navbar a {
-    text-decoration: none;
-    color: black;
-    padding: 10px;
-    margin: 10px;
-    border: 1px solid white;
-    border-radius: 20px; }
-  #navbar a:hover {
-    border-color: black; }
-  #navbar a.active {
-    border-color: grey; }
+body, html {
+  min-width: 320px; }
+
+.navigation {
+  padding-left: 0;
+  padding-right: 0; }
+
+.navbar-nav .nav-item {
+  float: none;
+  text-align: -webkit-center; }
 
 #content {
   margin-top: 20px; }
