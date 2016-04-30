@@ -1,3 +1,7 @@
+$transparent: rgba(0,0,0,0);
+$primary-red: #e60000;
+$primary-grey: #e6e6e6;
+
 body, html {
 	min-width: 320px;
 }
@@ -7,21 +11,57 @@ body, html {
 	padding-left: 0;
 	padding-right: 0;
 
-	#nav-items {
+	.navbar {
+		padding: 0 1rem;	
+	}
+
+	.nav-head {
+		background-color: $primary-red;
+		height: 50px;
 	}
 
 	.navbar-toggler {
+		margin-top: 6px;	
 	}
 
-}
+	a.navbar-brand {
+		height: 100%;	
+		line-height: 43px;
+		font-size: 22px;
+	}
 
-.navbar-nav .nav-item {
-	float: none;
-	text-align: -webkit-center;
+	nav {
+		background-color: $transparent;	
+	}
+
+	.nav-mobile-menu {
+		background-color: $primary-grey;	
+	}
+
+	.navbar-nav .nav-item {
+		float: none;	
+		text-align: -webkit-center;
+		font-size: 18px;
+	}
+
 }
 
 #content {
 	margin-top: 20px;
+}
+
+.card {
+
+	.card-block {
+		background-color: $primary-grey;	
+	}
+
+	.exec-description {
+		ul {
+			list-style-type: none;	
+			padding-left: 0;
+		}	
+	}
 }
 
 

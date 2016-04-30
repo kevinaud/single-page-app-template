@@ -5,9 +5,38 @@ body, html {
   padding-left: 0;
   padding-right: 0; }
 
-.navbar-nav .nav-item {
+.navigation .navbar {
+  padding: 0 1rem; }
+
+.navigation .nav-head {
+  background-color: #e60000;
+  height: 50px; }
+
+.navigation .navbar-toggler {
+  margin-top: 6px; }
+
+.navigation a.navbar-brand {
+  height: 100%;
+  line-height: 43px;
+  font-size: 22px; }
+
+.navigation nav {
+  background-color: transparent; }
+
+.navigation .nav-mobile-menu {
+  background-color: #e6e6e6; }
+
+.navigation .navbar-nav .nav-item {
   float: none;
-  text-align: -webkit-center; }
+  text-align: -webkit-center;
+  font-size: 18px; }
 
 #content {
   margin-top: 20px; }
+
+.card .card-block {
+  background-color: #e6e6e6; }
+
+.card .exec-description ul {
+  list-style-type: none;
+  padding-left: 0; }
